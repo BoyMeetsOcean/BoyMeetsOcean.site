@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Where I Am Now | Boy Meets Ocean</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="inner-page">
+   <header class="site-header">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">
+            <img src="assets/bmo-logo.png" alt="Boy Meets Ocean logo">
+        </span>
+    <span class="brand-copy">
+    BOY MEETS<br><strong>OCEAN</strong>
+</span>
+</a>   
+    <nav class="nav"><a href="index.html#stories">Stories</a><a href="about.html">About</a><a
+                href="shop.html">Shop</a></nav>
+    </header>
+    <main class="page-shell">
+        <p class="eyebrow dark">LIVE SHIP'S LOG</p>
+        <h1>WHERE I AM <span>NOW.</span></h1>
+        <div class="location-page-grid">
+            <div class="map-panel tall">
+                <div class="map-grid"></div>
+                <div class="map-pin"><span>⚓</span>
+                    <div class="pulse"></div>
+                </div>
+            </div>
+            <div class="prose-card">
+                <h2 id="pageLocation">Marion, Massachusetts</h2>
+                <p id="pageLocationUpdate">Exploring New England by water.</p>
+                <hr>
+                <p><strong>Coordinates:</strong> <span id="pageCoordinates"></span></p>
+                <p><strong>Last updated:</strong> <span id="pageUpdated"></span></p>
+                <p><strong>Next heading:</strong> <span id="pageNext"></span></p>
+                <p class="privacy-note">For safety, this page should show a general area rather than a precise live
+                    position.</p>
+            </div>
+        </div><a class="button dark-button" href="index.html">Back home</a>
+    </main>
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
