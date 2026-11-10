@@ -1,0 +1,982 @@
+:root {
+    --navy: #39a5f2;
+    --deep: #19bad6;
+    --aqua: #43c7f3;
+    --blue: #15aee3;
+    --sand: #E8D7B5;
+    --white: #E8D7B5;
+    --ink: #0b2734;
+    --orange: #ff7044
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    background: #E8D7B5
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+img {
+    display: block;
+    width: 100%
+}
+
+.announcement {
+    background: var(--aqua);
+    color: var(--navy);
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 9px 20px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.announcement a {
+    text-decoration: underline
+}
+
+.site-header {
+    height: 82px;
+    padding: 0 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eedfc1;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .06)
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px
+}
+
+.brand-mark {
+    width: 96px;
+    px;
+    height: 96px;
+    px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    object-fit: contain;
+    
+    font-family: "Bebas Neue";
+    font-size: 23px;
+    letter-spacing: 1px
+}
+
+.brand-copy {
+    font-family: "Bebas Neue";
+    font-size: 18px;
+    line-height: .88;
+    letter-spacing: 1px
+}
+
+.brand-copy strong {
+    color: var(--blue);
+    font-size: 24px
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px
+}
+
+.nav a:hover {
+    color: var(--blue)
+}
+
+.nav-cta {
+    background: var(--navy);
+    color: #fff !important;
+    padding: 12px 20px;
+    border-radius: 99px
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 28px
+}
+
+.hero {
+    min-height: 720px;
+    background: linear-gradient(125deg, var(--navy), #075470);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    padding: 70px 7vw 90px;
+    position: relative;
+    overflow: hidden
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: rgba(0, 210, 198, .08);
+    right: -130px;
+    top: -130px
+}
+
+.hero-watermark {
+    position: absolute;
+    left: -20px;
+    bottom: 25px;
+    font-family: "Bebas Neue";
+    font-size: 190px;
+    line-height: 1;
+    color: rgba(255, 255, 255, .035);
+    white-space: nowrap
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2.6px;
+    color: var(--aqua)
+}
+
+.eyebrow.dark {
+    color: #078d99
+}
+
+.hero h1,
+.section h2,
+.page-shell h1 {
+    font-family: "Bebas Neue";
+    font-size: clamp(70px, 8vw, 126px);
+    line-height: .84;
+    letter-spacing: 1px;
+    margin: 20px 0
+}
+
+.hero h1 span,
+.section h2 span,
+.page-shell h1 span {
+    color: var(--aqua)
+}
+
+.hero-text {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 590px;
+    color: #d5e7ec
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 34px 0
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 22px;
+    border-radius: 7px;
+    font-weight: 800
+}
+
+.primary {
+    background: var(--aqua);
+    color: var(--navy)
+}
+
+.ghost {
+    border: 1px solid rgba(255, 255, 255, .5);
+    color: #fff
+}
+
+.light {
+    background: #fff;
+    color: var(--navy)
+}
+
+.dark-button {
+    background: var(--navy);
+    color: #fff
+}
+
+.social-proof {
+    display: flex;
+    align-items: center;
+    gap: 13px
+}
+
+.social-proof strong {
+    font-family: "Bebas Neue";
+    font-size: 36px;
+    color: var(--aqua)
+}
+
+.social-proof span {
+    font-size: 13px;
+    max-width: 150px;
+    color: #bdd0d8
+}
+
+.hero-visual {
+    position: relative;
+    max-width: 530px;
+    justify-self: end
+}
+
+.photo-frame {
+    background: #fff;
+    padding: 11px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .3);
+    transform: rotate(2deg)
+}
+
+.hero-photo img {
+    height: 520px;
+    object-fit: cover
+}
+
+.photo-label {
+    position: absolute;
+    left: -30px;
+    bottom: 30px;
+    background: var(--orange);
+    padding: 14px 20px;
+    font-family: "Bebas Neue";
+    font-size: 28px;
+    line-height: .9;
+    transform: rotate(-4deg)
+}
+
+.floating-badge {
+    position: absolute;
+    right: -28px;
+    top: -28px;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: var(--aqua);
+    color: var(--navy);
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    transform: rotate(8deg)
+}
+
+.ticker {
+    overflow: hidden;
+    background: var(--orange);
+    color: #fff;
+    padding: 13px 0;
+    font-family: "Bebas Neue";
+    font-size: 23px;
+    letter-spacing: 2px
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 28s linear infinite
+}
+
+.ticker-track span {
+    white-space: nowrap
+}
+
+@keyframes ticker {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+.section {
+    padding: 110px 7vw
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 48px
+}
+
+.section-heading h2 {
+    font-size: 82px;
+    margin: 15px 0 0
+}
+
+.section-heading>p {
+    max-width: 450px;
+    line-height: 1.8;
+    color: #62737a
+}
+
+.story-grid,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px
+}
+
+.story-card {
+    background: #f7f6f1;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .25s
+}
+
+.story-card:hover,
+.product-card:hover {
+    transform: translateY(-5px)
+}
+
+.story-card img {
+    height: 270px;
+    object-fit: cover
+}
+
+.story-body {
+    padding: 25px
+}
+
+.story-body small {
+    color: #068c99;
+    font-weight: 800;
+    letter-spacing: 2px
+}
+
+.story-body h3 {
+    font-size: 25px;
+    line-height: 1.15;
+    margin: 12px 0
+}
+
+.story-body p {
+    color: #63737a;
+    line-height: 1.6
+}
+
+.story-body span {
+    font-weight: 800
+}
+
+.now-section {
+    background: var(--sand)
+}
+
+.now-card {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(6, 30, 43, .16)
+}
+
+.map-panel {
+    min-height: 590px;
+    position: relative;
+    background: linear-gradient(135deg, #83e7df, #1a96b7);
+    overflow: hidden
+}
+
+.map-panel.tall {
+    min-height: 650px
+}
+
+.map-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, .18) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .18) 1px, transparent 1px);
+    background-size: 45px 45px
+}
+
+.map-panel:before,
+.map-panel:after {
+    content: "";
+    position: absolute;
+    border-radius: 48% 52% 66% 34%;
+    background: #f3dca9
+}
+
+.map-panel:before {
+    width: 52%;
+    height: 78%;
+    left: -10%;
+    top: 10%;
+    transform: rotate(18deg)
+}
+
+.map-panel:after {
+    width: 30%;
+    height: 44%;
+    right: -7%;
+    bottom: -5%;
+    transform: rotate(-18deg)
+}
+
+.route {
+    position: absolute;
+    border: 3px dashed rgba(255, 255, 255, .8);
+    border-color: #fff transparent transparent transparent;
+    border-radius: 50%
+}
+
+.route-one {
+    width: 58%;
+    height: 42%;
+    left: 26%;
+    top: 30%;
+    transform: rotate(20deg)
+}
+
+.route-two {
+    width: 35%;
+    height: 28%;
+    right: 2%;
+    top: 5%;
+    transform: rotate(-28deg)
+}
+
+.map-pin {
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25)
+}
+
+.pulse {
+    position: absolute;
+    inset: -12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: pulse 1.8s infinite
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.6);
+        opacity: 0
+    }
+}
+
+.coordinates {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(6, 30, 43, .86);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 1px
+}
+
+.now-copy {
+    background: var(--navy);
+    color: #fff;
+    padding: 65px
+}
+
+.now-copy h2 {
+    font-size: 82px;
+    margin: 13px 0 25px
+}
+
+.now-copy>p {
+    color: #c6d7dd;
+    line-height: 1.7
+}
+
+.location-pill {
+    display: inline-flex;
+    background: var(--aqua);
+    color: var(--navy);
+    padding: 12px 15px;
+    border-radius: 99px;
+    font-weight: 800;
+    margin-bottom: 10px
+}
+
+.now-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    padding: 24px 0;
+    margin: 28px 0
+}
+
+.now-meta small {
+    display: block;
+    color: #87a0aa;
+    margin-bottom: 6px
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 8vw;
+    align-items: center
+}
+
+.about-photo {
+    position: relative
+}
+
+.about-photo img {
+    height: 650px;
+    object-fit: cover;
+    border-radius: 10px
+}
+
+.stamp {
+    position: absolute;
+    right: -30px;
+    bottom: 40px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--orange);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: "Bebas Neue";
+    font-size: 22px;
+    transform: rotate(-8deg)
+}
+
+.about-copy h2 {
+    font-size: 82px
+}
+
+.about-copy p {
+    line-height: 1.8;
+    color: #5e7178
+}
+
+.about-copy .lead {
+    font-size: 20px;
+    color: var(--ink)
+}
+
+.stat-row {
+    display: flex;
+    gap: 45px;
+    margin: 35px 0
+}
+
+.stat-row strong {
+    display: block;
+    font-family: "Bebas Neue";
+    font-size: 42px;
+    color: #0799a3
+}
+
+.stat-row span {
+    font-size: 12px;
+    color: #6b7c82
+}
+
+.shop-section {
+    background: var(--deep);
+    color: #fff;
+    text-align: center
+}
+
+.shop-heading {
+    max-width: 720px;
+    margin: 0 auto 50px
+}
+
+.shop-heading h2 {
+    font-size: 90px
+}
+
+.shop-heading p {
+    line-height: 1.7;
+    color: #bdd0d8
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    transition: .25s
+}
+
+.product-card img {
+    height: 340px;
+    object-fit: cover
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: var(--ink)
+}
+
+.product-info h3 {
+    margin: 0
+}
+
+.product-info strong {
+    color: #078d99
+}
+
+.shop-all {
+    margin-top: 35px
+}
+
+.follow-section {
+    text-align: center
+}
+
+.follow-section h2 {
+    font-size: 82px
+}
+
+.follow-section>p {
+    color: #687980
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    max-width: 900px;
+    margin: 35px auto
+}
+
+.social-links a {
+    border: 1px solid #d7e0e3;
+    padding: 17px;
+    border-radius: 7px;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between
+}
+
+.newsletter {
+    display: flex;
+    max-width: 650px;
+    margin: 35px auto 10px
+}
+
+.newsletter input {
+    flex: 1;
+    border: 1px solid #cbd7da;
+    padding: 17px;
+    font: inherit;
+    border-radius: 7px 0 0 7px
+}
+
+.newsletter button {
+    border: 0;
+    background: var(--navy);
+    color: #fff;
+    padding: 0 24px;
+    font-weight: 800;
+    border-radius: 0 7px 7px 0
+}
+
+footer {
+    background: var(--navy);
+    color: #fff;
+    padding: 42px 7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.footer-links {
+    display: flex;
+    gap: 22px
+}
+
+.inner-page {
+    background: var(--sand)
+}
+
+.page-shell {
+    padding: 90px 8vw 120px;
+    max-width: 1300px;
+    margin: auto
+}
+
+.page-shell h1 {
+    font-size: 105px;
+    color: var(--navy)
+}
+
+.prose-card {
+    background: #fff;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 30px 0
+}
+
+.location-page-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 30px;
+    margin: 30px 0
+}
+
+.privacy-note {
+    background: #ffeba9;
+    padding: 13px;
+    border-radius: 6px
+}
+
+.shop-page {
+    background: var(--deep);
+    color: #fff
+}
+
+.shop-page .site-header {
+    color: var(--ink)
+}
+
+.shop-page .page-shell h1 {
+    color: #fdead3
+}
+
+.shop-intro {
+    max-width: 700px;
+    color: #c4d6dd;
+    line-height: 1.7;
+    margin-bottom: 40px
+}
+
+@media(max-width:900px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 25px;
+        flex-direction: column;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .1)
+    }
+
+    .nav.open {
+        display: flex
+    }
+
+    .menu-toggle {
+        display: block
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px
+    }
+
+    .hero-visual {
+        justify-self: center;
+        margin-top: 60px
+    }
+
+    .story-grid,
+    .product-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .now-card,
+    .about-section,
+    .location-page-grid {
+        grid-template-columns: 1fr
+    }
+
+    .section-heading {
+        display: block
+    }
+
+    .social-links {
+        grid-template-columns: 1fr 1fr
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+}
+
+@media(max-width:600px) {
+    .announcement {
+        font-size: 11px;
+        gap: 8px
+    }
+
+    .site-header {
+        padding: 0 20px
+    }
+
+    .hero,
+    .section {
+        padding-left: 22px;
+        padding-right: 22px
+    }
+
+    .hero h1 {
+        font-size: 70px
+    }
+
+    .hero-photo img {
+        height: 390px
+    }
+
+    .floating-badge {
+        right: -4px
+    }
+
+    .photo-label {
+        left: -10px
+    }
+
+    .section-heading h2,
+    .now-copy h2,
+    .about-copy h2,
+    .shop-heading h2,
+    .follow-section h2 {
+        font-size: 62px
+    }
+
+    .story-grid,
+    .product-grid {
+        grid-template-columns: 1fr
+    }
+
+    .now-copy {
+        padding: 38px 25px
+    }
+
+    .about-photo img {
+        height: 480px
+    }
+
+    .stamp {
+        right: 5px;
+        width: 125px;
+        height: 125px;
+        font-size: 18px
+    }
+
+    .stat-row {
+        gap: 20px
+    }
+
+    .social-links {
+        grid-template-columns: 1fr
+    }
+
+    .newsletter {
+        display: block
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        border-radius: 7px
+    }
+
+    .newsletter button {
+        padding: 16px;
+        margin-top: 8px
+    }
+
+    .page-shell {
+        padding: 60px 22px
+    }
+
+    .page-shell h1 {
+        font-size: 72px
+    }
+
+    .prose-card {
+        padding: 25px
+    }
+
+    .footer-links {
+        display: none
+    }
+}
+
+
+/* Story page buttons */
+.story-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: rgba(67, 199, 243, 0.12);
+    border: 2px solid var(--aqua);
+    border-radius: 16px;
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.story-button:hover {
+    transform: translateY(-2px);
+    background: rgba(67, 199, 243, 0.22);
+    box-shadow: 0 6px 16px rgba(25, 174, 214, 0.15);
+}

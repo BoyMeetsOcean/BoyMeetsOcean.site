@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#005179"/><stop offset="1" stop-color="#00d2c6"/></linearGradient></defs>
+<rect width="1200" height="900" fill="url(#g)"/>
+<circle cx="930" cy="170" r="170" fill="#fff" opacity=".14"/>
+<path d="M0 650 Q220 540 420 650 T800 635 T1200 650 V900 H0Z" fill="#fff" opacity=".18"/>
+<path d="M0 705 Q220 595 420 705 T800 690 T1200 705 V900 H0Z" fill="#fff" opacity=".15"/>
+<text x="70" y="120" font-family="Arial" font-weight="700" font-size="48" fill="#fff">UNDERWATER</text>
+<text x="70" y="178" font-family="Arial" font-size="25" fill="#fff" opacity=".8">Story image placeholder</text>
+<text x="70" y="830" font-family="Arial" font-size="22" fill="#fff" opacity=".7">Replace this placeholder with an Atticus photo</text>
+</svg>
